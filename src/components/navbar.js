@@ -9,17 +9,21 @@ import "./navbar.css"
 const NavBar = () => {
     return (
         <Navbar className="navbar-custom" expand="lg">
-            <Container>
+            <Container fluid>
                 <Navbar.Brand>
                     <Link to="/home">
-                        <img src={logo} height="140" width="150" className="d-inline-block align-top"
+                        <img src={logo} className="navbar-img"
                              alt={"logo_A_led"}/>
                     </Link>
                 </Navbar.Brand>
                 <Nav className="me-auto">
                     <Link to="/Formation" className="navbar-link-custom">Formations</Link>
+                    <Link to="/Formateurs"  className="navbar-link-custom">Formateurs</Link>
+                    <Link to="/Contact"  className="navbar-link-custom">Contact</Link>
+                </Nav>
+                <Nav className="identification">
                     <Link to="/Inscription="  className="navbar-link-custom">Inscription</Link>
-                    <Link to="/Login"  className="navbar-link-custom">Login</Link>
+                    <Link to="/Login"  className="navbar-link-custom login">Login</Link>
                 </Nav>
             </Container>
         </Navbar>

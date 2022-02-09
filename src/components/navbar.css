@@ -9,7 +9,22 @@
     color: grey;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2.5em;
-    margin-left: 15%;
-    margin-right: 15%;
+    padding-right: 10%;
   }
   
+  .navbar-img{
+    float: right;
+    height: 160px; 
+    width: 170px;}
+
+.identification{
+    
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login{
+ padding-right: 10%;
+}

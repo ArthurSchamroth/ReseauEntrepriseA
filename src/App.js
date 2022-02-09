@@ -33,7 +33,7 @@ function App() {
             <NavBar/>
             <Switch>
                 <Route path='/' exact component={Home}/>
-                <Route path='/Formation' component={Formation}/>
+                <Route path='/Formation' component={Formations}/>
                 <Route path="/Formateur" component={Formateur}/>
                 <Route path='/Inscription' component={InscriptionForm}/>
                 <Route path='/Login' component={Login}/>

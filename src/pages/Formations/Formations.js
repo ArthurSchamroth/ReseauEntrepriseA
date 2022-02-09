@@ -37,32 +37,37 @@ function Formation() {
                     <Col></Col>
                     <Col className="Main" xs={50} lg={50} xl={50} xxl={50}>
                         <h1 className="Formation-title">Formations</h1>
-                        <p className="Formation-text">VOus trouverez ci-dessous la liste des formations disponible triée par catégorie</p>
+                        <hr className="hr-custom"/>
+                        <p className="Formation-text">Vous trouverez ci-dessous la liste des formations disponible triée par catégorie</p>
+                        <br/><br/>
                         <Container fluid>
                             {listeFormation.map((data, key) => { 
                                 if(data.categorie === sameCategorie) {
                                     sameCategorie = data.categorie
                                     return(
-                                    <Row key={key}>
+                                    <Row key={key} className="fiches-custom">
                                         <FichesFormation 
                                         nom ={data.nom}
                                         desc = {data.desc}
                                         formateur_id = {data.formateur_id}
                                         categorie= {data.categorie}
                                         />
+                                        <br/>
                                     </Row>)}
                                 else {
                                     sameCategorie = data.categorie
                                     return(
-                                    <Row key={key}>
-                                        <h2>{data.categorie}</h2>
+                                    <Row key={key} className="fiches-custom">
+                                        <h2 className="Categorie-title">{data.categorie}</h2>
+                                        <hr className="hr-categorie"/>
                                         <FichesFormation 
                                         nom ={data.nom}
                                         desc = {data.desc}
                                         formateur_id = {data.formateur_id}
                                         categorie= {data.categorie}
                                         />
-                                </Row>)
+                                        <br/>
+                                    </Row>)
                             }
                             })}
                             {console.log(sameCategorie)}

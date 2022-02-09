@@ -2,6 +2,7 @@
     color: #004080;
     text-shadow: 1;
     opacity: 1;
+    font-size: 3em;
 }
 
 .Formation-text{
@@ -12,4 +13,30 @@
     background-color: #5394ac;
     height: 100vh;
     opacity: 0.8;
+}
+
+.hr-custom{
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: #004080;
+    border: 2px solid #004080;
+}
+
+.hr-categorie{
+    border-right: 50%;
+    background-color: #004080;
+    border: 2px solid #004080;
+}
+
+.fiches-custom{
+    text-align: left;
+    margin-top: 2.5em;
+}
+
+.Categorie-title{
+    color: #063970;
+
+}
+.fiches-custom:hover{
+    color: white;
 }

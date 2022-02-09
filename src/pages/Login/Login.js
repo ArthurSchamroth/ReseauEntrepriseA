@@ -19,29 +19,38 @@ const Login = () => {
     }
     return (
         <div className="Login">
-            <h1>Connexion</h1>
-            <label>Pseudo</label>
-            <input
-                type="text"
-                placeholder="Username"
-                onChange={(e) => {
-                    setUserName(e.target.value)
-                }}
-            />
-            <label>Mot de passe</label>
-            <input
-                type="text"
-                placeholder="Password"
-                onChange={(e) => {
-                    setUserPassword(e.target.value)
-                }}
-            />
-            <button onClick={login}>Connexion</button>
-            <button>
-                <Link to="/Inscription">
+            <form className="login-form" id="login-form" onSubmit={login}>
+
+                <input
+                    type="text"
+                    className="username-input"
+                    id="user-input"
+                    placeholder="Username"
+                    onChange={(e) => {
+                        setUserName(e.target.value)
+                    }}
+                />
+                <br/>
+
+                <input
+                    type="text"
+                    className="password-input"
+                    id="password-input"
+                    placeholder="Password"
+                    onChange={(e) => {
+                        setUserPassword(e.target.value)
+                    }}
+                />
+                <br/>
+                <input type="submit" className="login-input" value="Connexion"/>
+            </form>
+
+            <button className="inscription-button">
+                <Link to="/Inscription" className="inscription-link">
                     Pas encore inscrit ?
                 </Link>
             </button>
+
         </div>
     );
 };

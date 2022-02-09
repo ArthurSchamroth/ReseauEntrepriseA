@@ -9,7 +9,10 @@ const NavBar = () => {
         <Navbar bg="#1b1e1c" expand="lg">
             <Container>
                 <Navbar.Brand>
-                    <img src={logo} height="140" width="150" className="d-inline-block align-top" alt={"logo_A_led"}/>
+                    <Link to="/home">
+                        <img src={logo} height="140" width="150" className="d-inline-block align-top"
+                             alt={"logo_A_led"}/>
+                    </Link>
                 </Navbar.Brand>
                 <Nav className="me-auto">
                     <Link to="/Formation">Formations</Link>

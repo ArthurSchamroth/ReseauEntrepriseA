@@ -12,8 +12,6 @@ const Home = () => {
             width: '100vw',
             height: '100vh'
         }}>
-
-
             <Container fluid>
                 <Row>
                     <h1>Acceuil</h1>

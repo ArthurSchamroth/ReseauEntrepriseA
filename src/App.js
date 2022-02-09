@@ -8,8 +8,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Switch, Route, Link, Redirect} from "react-router-dom";
 
-import NavBar from "./components/navbar";
-import Formation from "./pages/Formations/Formations"
+import NavBar from "./components/navbar/navbar";
+import Formations from "./pages/Formations/Formations"
 import Login from "./pages/Login/Login"
 import InscriptionForm from "./pages/Inscription/Insciption";
 import Home from "./pages/home";

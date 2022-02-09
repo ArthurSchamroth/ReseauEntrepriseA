@@ -1,0 +1,33 @@
+.navbar-custom{
+    background-color: #1b1e1c ;
+}
+  
+  
+.navbar-link-custom{
+    cursor: default;   
+    text-decoration: none;
+    color: #86c3ed;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5em;
+    padding-right: 10%;
+}
+.navbar-link-custom:hover{
+    color: white;
+    
+}
+.navbar-img{
+    float: right;
+    height: 160px; 
+    width: 170px;}
+
+.identification{
+    
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login{
+ padding-right: 10%;
+}

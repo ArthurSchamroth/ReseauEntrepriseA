@@ -18,7 +18,7 @@ const NavBar = () => {
                 </Navbar.Brand>
                 <Nav className="me-auto">
                     <Link to="/Formation" className="navbar-link-custom">Formations</Link>
-                    <Link to="/Inscription="  className="navbar-link-custom">Inscription</Link>
+                    <Link to="/Formateur"  className="navbar-link-custom">Formateur</Link>
                     <Link to="/Login"  className="navbar-link-custom">Login</Link>
                 </Nav>
             </Container>

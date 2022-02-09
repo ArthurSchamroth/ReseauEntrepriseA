@@ -13,6 +13,7 @@ import Formation from "./pages/Formations/Formations"
 import Login from "./pages/Login/Login"
 import InscriptionForm from "./pages/Inscription/Insciption";
 import Home from "./pages/home";
+import Formateur from "./pages/Formateur/Formateur";
 
 
 const bgstyles = {
@@ -33,6 +34,7 @@ function App() {
             <Switch>
                 <Route path='/' exact component={Home}/>
                 <Route path='/Formation' component={Formation}/>
+                <Route path="/Formateur" component={Formateur}/>
                 <Route path='/Inscription' component={InscriptionForm}/>
                 <Route path='/Login' component={Login}/>
                 <Redirect to="/"/>

@@ -1,6 +1,7 @@
 import React from "react";
 import background from "../img/bgimage.png";
-import {Container, Row} from "react-bootstrap";
+import {Container, Row, Col} from "react-bootstrap";
+import "./pages.css"
 
 const Home = () => {
     return (
@@ -12,10 +13,13 @@ const Home = () => {
             width: '100vw',
             height: '100vh'
         }}>
-            <Container fluid>
+            <Container>
+
                 <Row>
-                    <h1>Acceuil</h1>
-                    <p>Lorem Ipsum. Quae dum ita struuntur, indicatum est apud Tyrum indumentum regale textum occulte,
+                    <Col x></Col>
+                    <Col className="Acceuil" xs={50} lg={50} xl={50} xxl={50}>
+                    <h1 className="Acceuil-text">Acceuil</h1>
+                    <p className="Acceuil-text">Lorem Ipsum. Quae dum ita struuntur, indicatum est apud Tyrum indumentum regale textum occulte,
                         incertum quo locante vel cuius usibus apparatum. ideoque rector provinciae tunc pater
                         Apollinaris eiusdem nominis ut conscius ductus est aliique congregati sunt ex diversis
                         civitatibus multi, qui atrocium criminum ponderibus urgebantur.
@@ -41,6 +45,8 @@ const Home = () => {
                         subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine
                         sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam
                         placet.</p>
+                        </Col>
+                        <Col className="col-left-side"></Col>
                 </Row>
             </Container>
         </div>

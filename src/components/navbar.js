@@ -3,10 +3,12 @@ import Navbar from "react-bootstrap/Navbar";
 import logo from "../img/aled_logo_discord.png";
 import Nav from "react-bootstrap/Nav";
 import {Link} from "react-router-dom";
+import "./navbar.css"
+
 
 const NavBar = () => {
     return (
-        <Navbar bg="#1b1e1c" expand="lg">
+        <Navbar className="navbar-custom" expand="lg">
             <Container>
                 <Navbar.Brand>
                     <Link to="/home">
@@ -15,9 +17,9 @@ const NavBar = () => {
                     </Link>
                 </Navbar.Brand>
                 <Nav className="me-auto">
-                    <Link to="/Formation">Formations</Link>
-                    <Link to="/Inscription">Inscription</Link>
-                    <Link to="/Login">Login</Link>
+                    <Link to="/Formation" className="navbar-link-custom">Formations</Link>
+                    <Link to="/Inscription="  className="navbar-link-custom">Inscription</Link>
+                    <Link to="/Login"  className="navbar-link-custom">Login</Link>
                 </Nav>
             </Container>
         </Navbar>

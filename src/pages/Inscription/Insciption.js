@@ -6,7 +6,7 @@ const InscriptionForm = () => {
     const [userpasswordFrom, setUserPassword] = useState("")
 
     const inscription = () => {/*
-        Axios.post("https///localhost:3000/register", {
+        Axios.post("https///localhost:3000/inscription", {
             username: usernameForm,
             userpassword: userpasswordFrom,
         }).then((response) => {

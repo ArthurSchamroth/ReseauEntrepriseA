@@ -1,6 +1,6 @@
 import {Container} from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
-import logo from "../img/aled_logo_discord.png";
+import logo from "../../img/aled_logo_discord.png";
 import Nav from "react-bootstrap/Nav";
 import {Link} from "react-router-dom";
 import "./navbar.css"

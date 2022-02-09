@@ -1,18 +1,21 @@
 .navbar-custom{
     background-color: #1b1e1c ;
-  }
+}
   
   
-  .navbar-link-custom{
+.navbar-link-custom{
     cursor: default;   
     text-decoration: none;
-    color: grey;
+    color: #86c3ed;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2.5em;
     padding-right: 10%;
-  }
-  
-  .navbar-img{
+}
+.navbar-link-custom:hover{
+    color: white;
+    
+}
+.navbar-img{
     float: right;
     height: 160px; 
     width: 170px;}

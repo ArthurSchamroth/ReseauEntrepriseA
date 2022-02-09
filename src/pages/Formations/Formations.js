@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import background from "../../img/bgimage.png";
 import {Container, Row, Col} from "react-bootstrap";
+import FichesFormation from "../../components/FichesFormation/FichesFormation";
 import "./Formations.css"
 
-const Formation = () => {
+function Formation() {
+
+    const [listeFormation, setListeFormation] = useState([]);
+    const [isInitialRender, setIsInitialRender] = useState(true);
+    /*ListeFormation => (id, nom, des, formateur_id) {
+
+    }*/
+    var sameCategorie = ""
+    const testListe= [{id : "1", nom: "Introduction a React", desc:"Cette formation vous permetteras d'apprendre le ReactJS afin de faire du developpement web.", formateur_id:"Jean Castex", categorie: "Developpement"},
+                    {id : "2", nom: "Apprennez a cuisiner comme un chef", desc: "Grace a cette formation, vous allez devenir un chef kebabiste de renom !", formateur_id:"Frederic Molas", categorie:"Cuisine"},
+                    {id: "3", nom: "Decouvrez la cuisine Namuroise", desc: "Grace a cette formation, vous pourrez apprendre comment des tyros peuvent faire de la bouffe trop trop sale", formateur_id: "Dimitri Doeran", categorie:"Cuisine"}]
+    
+    useEffect(()=>{
+        if(isInitialRender){
+            setIsInitialRender(false);
+            setListeFormation(testListe);
+        }
+    })
     return (
         <div className="App" style={{
             backgroundImage: `url(${background})`,
@@ -16,37 +34,42 @@ const Formation = () => {
             <Container>
 
                 <Row>
-                    <Col x></Col>
+                    <Col></Col>
                     <Col className="Main" xs={50} lg={50} xl={50} xxl={50}>
-                    <h1 className="Formation-title">Formation</h1>
-                    <p className="Formation-text">Lorem Ipsum. Quae dum ita struuntur, indicatum est apud Tyrum indumentum regale textum occulte,
-                        incertum quo locante vel cuius usibus apparatum. ideoque rector provinciae tunc pater
-                        Apollinaris eiusdem nominis ut conscius ductus est aliique congregati sunt ex diversis
-                        civitatibus multi, qui atrocium criminum ponderibus urgebantur.
-
-                        Sed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus
-                        insidias graves apud Constantium, cetera medium principem sed siquid auribus eius huius modi
-                        quivis infudisset ignotus, acerbum et inplacabilem et in hoc causarum titulo dissimilem sui.
-
-                        Coactique aliquotiens nostri pedites ad eos persequendos scandere clivos sublimes etiam si
-                        lapsantibus plantis fruticeta prensando vel dumos ad vertices venerint summos, inter arta tamen
-                        et invia nullas acies explicare permissi nec firmare nisu valido gressus: hoste discursatore
-                        rupium abscisa volvente, ruinis ponderum inmanium consternuntur, aut ex necessitate ultima
-                        fortiter dimicante, superati periculose per prona discedunt.
-
-                        Ideo urbs venerabilis post superbas efferatarum gentium cervices oppressas latasque leges
-                        fundamenta libertatis et retinacula sempiterna velut frugi parens et prudens et dives Caesaribus
-                        tamquam liberis suis regenda patrimonii iura permisit.
-
-                        Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia
-                        Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti,
-                        equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel
-                        turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva
-                        subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine
-                        sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam
-                        placet.</p>
-                        </Col>
-                        <Col className="col-left-side"></Col>
+                        <h1 className="Formation-title">Formations</h1>
+                        <p className="Formation-text">VOus trouverez ci-dessous la liste des formations disponible triée par catégorie</p>
+                        <Container fluid>
+                            {listeFormation.map((data, key) => { 
+                                if(data.categorie === sameCategorie) {
+                                    sameCategorie = data.categorie
+                                    return(
+                                    <Row key={key}>
+                                        <FichesFormation 
+                                        nom ={data.nom}
+                                        desc = {data.desc}
+                                        formateur_id = {data.formateur_id}
+                                        categorie= {data.categorie}
+                                        />
+                                    </Row>)}
+                                else {
+                                    sameCategorie = data.categorie
+                                    return(
+                                    <Row key={key}>
+                                        <h2>{data.categorie}</h2>
+                                        <FichesFormation 
+                                        nom ={data.nom}
+                                        desc = {data.desc}
+                                        formateur_id = {data.formateur_id}
+                                        categorie= {data.categorie}
+                                        />
+                                </Row>)
+                            }
+                            })}
+                            {console.log(sameCategorie)}
+                        </Container>
+                        
+                    </Col>
+                    <Col className="col-left-side"></Col>
                 </Row>
             </Container>
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Formateur = () => {
     return (
-        <h1>Page Formation</h1>
+        <h1>Page Formateur</h1>
     );
 };
 

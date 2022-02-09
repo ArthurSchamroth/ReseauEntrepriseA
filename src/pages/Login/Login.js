@@ -47,7 +47,7 @@ const Login = () => {
                             <br/>
 
                             <input
-                                type="text"
+                                type="password"
                                 className="password-input"
                                 id="password-input"
                                 placeholder="Password"

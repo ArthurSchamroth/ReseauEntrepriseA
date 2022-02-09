@@ -1,21 +1,23 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
+import Axios from "axios";
 
 const Login = () => {
     const [username, setUserName] = useState("")
-    const [userpassword, setUserPassword] = useState("")
-    const login = () => {/*
+    const [userPassword, setUserPassword] = useState("")
+    const [loginStatus, setLoginStatus] = useState("")
+    const login = () => {
         Axios.post("https///localhost:3000/inscription", {
             username: username,
-            userpassword: userpassword,
+            userPassword: userPassword,
         }).then((response) => {
         if(response.data.message){
             setLoginStatus(response.data.message)
             }
         else{
-            setLoginStatus(response.data.[0].username)
+            setLoginStatus(response.data[0].username)
         }
-        })*/
+        })
     }
     return (
         <div className="Login">

@@ -14,6 +14,7 @@ import Login from "./pages/Login/Login"
 import InscriptionForm from "./pages/Inscription/Insciption";
 import Home from "./pages/home";
 import Formateur from "./pages/Formateur/Formateur";
+import InfoFormation from './components/InfoFormation/InfoFormation';
 
 
 const bgstyles = {
@@ -37,6 +38,7 @@ function App() {
                 <Route path="/Formateur" component={Formateur}/>
                 <Route path='/Inscription' component={InscriptionForm}/>
                 <Route path='/Login' component={Login}/>
+                <Route path='/Informations' component={InfoFormation}/>
                 <Redirect to="/"/>
             </Switch>
         </Router>

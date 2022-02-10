@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
+import { Component } from "react";
 
-class FichesFormation extends Component{
-
-
+class InfoFormation extends Component{
     render(){
         return(
             <div onClick={() => this.props.actionShow(this.props.id)}>
@@ -14,4 +12,4 @@ class FichesFormation extends Component{
     }
 }
 
-export default FichesFormation;
+export default InfoFormation;

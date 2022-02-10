@@ -22,7 +22,7 @@ const NavBar = () => {
                     <Link to="/Contact"  className="navbar-link-custom">Contact</Link>
                 </Nav>
                 <Nav className="identification">
-                    <Link to="/Inscription="  className="navbar-link-custom">Inscription</Link>
+                    <Link to="/Inscription"  className="navbar-link-custom">Inscription</Link>
                     <Link to="/Login"  className="navbar-link-custom login">Login</Link>
                 </Nav>
             </Container>

@@ -18,11 +18,11 @@ const NavBar = () => {
                 </Navbar.Brand>
                 <Nav className="me-auto">
                     <Link to="/Formation" className="navbar-link-custom">Formations</Link>
-                    <Link to="/Formateurs"  className="navbar-link-custom">Formateurs</Link>
+                    <Link to="/Formateur"  className="navbar-link-custom">Formateurs</Link>
                     <Link to="/Contact"  className="navbar-link-custom">Contact</Link>
                 </Nav>
                 <Nav className="identification">
-                    <Link to="/Inscription="  className="navbar-link-custom">Inscription</Link>
+                    <Link to="/Inscription"  className="navbar-link-custom">Inscription</Link>
                     <Link to="/Login"  className="navbar-link-custom login">Login</Link>
                 </Nav>
             </Container>

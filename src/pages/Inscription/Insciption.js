@@ -10,7 +10,8 @@ const InscriptionForm = () => {
     const [userPasswordConfirmation, setUserPasswordConfirmation] = useState("")
     const [userMail, setUserMail] = useState("")
 
-    const inscription = () => {
+    const inscription = (e) => {
+        e.preventDefault();
         if (userPassword === userPasswordConfirmation) {
             Axios.post("http///localhost:3000/inscriptionReq", {
                 username: username,

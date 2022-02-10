@@ -2,6 +2,7 @@ const user = require('../model/user.model');
 const mysql = require('../model/db');
 
 exports.inscription = (req, res) => {
+    console.log("dans controller")
     user.inscription((err, data) => {
         console.log(req)
         if (err) {

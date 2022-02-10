@@ -6,6 +6,7 @@ const user = function (user) {
 
 
 user.inscription = (req,result) => {
+    console.log("dans inscription model")
     const username = req.body.username;
     const password = req.body.password;
     const mail = req.body.email;
@@ -22,6 +23,7 @@ user.inscription = (req,result) => {
     });
 };
 user.login = (req,result) => {
+    console.log("dans login model")
     const username = req.body.username;
     const password = req.body.password;
     mysql.query("INSERT INTO users (username, password) VALUES (?,?)",

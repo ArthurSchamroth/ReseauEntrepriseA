@@ -9,7 +9,8 @@ const Login = () => {
     const [username, setUserName] = useState("")
     const [userPassword, setUserPassword] = useState("")
     const [loginStatus, setLoginStatus] = useState("")
-    const login = () => {
+    const login = (e) => {
+        e.preventDefault();
         Axios.post("http///localhost:3000/loginReq", {
             username: username,
             userPassword: userPassword,

@@ -12,9 +12,9 @@ function Formation() {
 
     }*/
     var sameCategorie = ""
-    const testListe= [{id : "1", nom: "Introduction a React", desc:"Cette formation vous permetteras d'apprendre le ReactJS afin de faire du developpement web.", formateur_id:"Jean Castex", categorie: "Developpement"},
-                    {id : "2", nom: "Apprennez a cuisiner comme un chef", desc: "Grace a cette formation, vous allez devenir un chef kebabiste de renom !", formateur_id:"Frederic Molas", categorie:"Cuisine"},
-                    {id: "3", nom: "Decouvrez la cuisine Namuroise", desc: "Grace a cette formation, vous pourrez apprendre comment des tyros peuvent faire de la bouffe trop trop sale", formateur_id: "Dimitri Doeran", categorie:"Cuisine"}]
+    const testListe= [{id : "1", nom: "Introduction a React", desc:"Cette formation vous permetteras d'apprendre le ReactJS afin de faire du developpement web.", formateur_id:"Jean Castex", categorie: "Developpement", urlVideo: "https://www.youtube.com/embed/K3D2rjAUQ3o"},
+                    {id : "2", nom: "Apprennez a cuisiner comme un chef", desc: "Grace a cette formation, vous allez devenir un chef kebabiste de renom !", formateur_id:"Frederic Molas", categorie:"Cuisine", urlVideo: "https://www.youtube.com/embed/fzWjwo7E5ik"},
+                    {id: "3", nom: "Decouvrez la cuisine Namuroise", desc: "Grace a cette formation, vous pourrez apprendre comment des tyros peuvent faire de la bouffe trop trop sale", formateur_id: "Dimitri Doeran", categorie:"Cuisine", urlVideo: "https://www.youtube.com/embed/3AkM7xFIaDE"}]
     
     useEffect(()=>{
         if(isInitialRender){
@@ -32,7 +32,7 @@ function Formation() {
             height: '100vh'
         }}>
             <Container>
-
+        
                 <Row>
                     <Col></Col>
                     <Col className="Main" xs={50} lg={50} xl={50} xxl={50}>
@@ -49,6 +49,7 @@ function Formation() {
                                         desc = {data.desc}
                                         formateur_id = {data.formateur_id}
                                         categorie= {data.categorie}
+                                        urlVideo = {data.urlVideo}
                                         />
                                     </Row>)}
                                 else {
@@ -61,6 +62,7 @@ function Formation() {
                                         desc = {data.desc}
                                         formateur_id = {data.formateur_id}
                                         categorie= {data.categorie}
+                                        urlVideo = {data.urlVideo}
                                         />
                                 </Row>)
                             }
